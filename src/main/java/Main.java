@@ -1,18 +1,23 @@
+package main.java;
+
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        int number = 0;
+        double number = 0;
         Scanner console = new Scanner(System.in);
-        System.out.println("Введите целое число больше 7:");
-        if (console.hasNextInt()) {
-            number = console.nextInt();
+        System.out.println("Введите число больше 7:");
+        if (console.hasNext()) {
+            number = console.nextDouble();
             if (number > 7) {
                 System.out.println("Привет");
             }
         }
+
+        System.out.println();
+
 
         String name = "";
         System.out.println("Введите имя: ");
@@ -27,6 +32,9 @@ public class Main {
             System.out.println("Нет такого имени");
         }
 
+        System.out.println();
+
+
         int sizeArray = 0;
         System.out.println("Введите длину массива: ");
         sizeArray = console.nextInt();
@@ -39,7 +47,7 @@ public class Main {
         }
 
         for (int i = 0; i < sizeArray; i++) {
-            if ((array[i] % 3 == 0) && (array[i] != 0)) {
+            if (array[i] % 3 == 0) {
                 System.out.println("Элемент массива кратный 3: " + array[i]);
             }
         }
